@@ -1,23 +1,18 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
-import * from './views/*' // Fill in with page names
-import * from '*'
-import * from '*'
+import Home from "./views/Home.vue"; // Fill in with page names
+import About from "./views/About.vue";
 
 export default createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     {
-      component:*, // Fill in with page name
-      path: '/' // Fill in with page path
+      component: Home, // Fill in with page name
+      path: "/", // Fill in with page path
     },
     {
-      component:*,
-      path: '/*'
+      component: About,
+      path: "/about",
     },
-    {
-      component:*,
-      path: '/*' // Home page can be left empty
-    }
-  ]
-})
+  ],
+});
