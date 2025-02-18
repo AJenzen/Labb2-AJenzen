@@ -1,18 +1,18 @@
-<script setup></script>
-
 <template>
-  <nav>
-    <ul>
-      <li><RouterLink to="/">Home Page</RouterLink></li>
-      <li><RouterLink to="/about">About</RouterLink></li>
-    </ul>
-  </nav>
-
+  <Navbar />
   <main>
-    <routerView />
-    <!--This is where the content of the current route will be
-    rendered-->
+    <router-view />
   </main>
 </template>
+
+<script>
+import Navbar from "./components/NavBar.vue";
+
+export default {
+  components: {
+    Navbar,
+  },
+};
+</script>
 
 <style scoped></style>

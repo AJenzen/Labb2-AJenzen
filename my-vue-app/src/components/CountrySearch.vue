@@ -88,13 +88,15 @@ export default {
   text-align: center;
 }
 input {
-  width: 80%;
+  width: auto;
   padding: 8px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 button {
   padding: 8px 15px;
   cursor: pointer;
+  display: block;
+  margin: 10px auto;
 }
 .error {
   color: red;
