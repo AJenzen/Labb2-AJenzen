@@ -1,12 +1,16 @@
 <template>
   <div class="container">
-    <h2>Search for a country</h2>
+    <h1>🗺️ Search for a country</h1>
     <input
       v-model="searchQuery"
       @keyup.enter="fetchCountry"
       placeholder="Enter a country name..."
     />
     <button @click="fetchCountry">Search</button>
+
+    <p>or</p>
+
+    <button @click="fetchRandomCountry">Randomizer</button>
 
     <p v-if="loading">Loading...</p>
     <p v-if="error" class="error">{{ error }}</p>
@@ -26,10 +30,10 @@ export default {
   },
   data() {
     return {
-      searchQuery: "", // För att hålla sökfrågan
-      country: null, // För att lagra landet som kommer tillbaka från API:et
-      loading: false, // För att visa laddningsindikator
-      error: null, // För att visa eventuella fel
+      searchQuery: "", // Håller sökfrågan
+      country: null, // Lagrar landet som kommer tillbaka från API:et
+      loading: false, // Visar laddningsindikator
+      error: null, // Visar eventuella fel
     };
   },
   methods: {
@@ -72,6 +76,23 @@ export default {
         }
       } catch (err) {
         console.error("API error:", err); // Logga exakt fel från API:n
+        this.error = "Something went wrong with the API call.";
+      } finally {
+        this.loading = false;
+      }
+    },
+
+    // Metod för att hämta ett slumpmässigt land
+    async fetchRandomCountry() {
+      this.loading = true;
+      this.error = null;
+      this.country = null;
+
+      try {
+        const response = await axios.get("https://restcountries.com/v3.1/all");
+        const countries = response.data;
+        this.country = countries[Math.floor(Math.random() * countries.length)];
+      } catch (err) {
         this.error = "Something went wrong with the API call.";
       } finally {
         this.loading = false;

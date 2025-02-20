@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import Home from "./views/Home.vue"; // Fill in with page names
-import About from "./views/About.vue";
+import Home from "./views/Home.vue"; 
+import Quiz from "./views/Quiz.vue";
 
 export default createRouter({
   history: createWebHistory(),
   routes: [
     {
-      component: Home, // Fill in with page name
-      path: "/", // Fill in with page path
+      component: Home,
+      path: "/",
     },
     {
-      component: About,
-      path: "/about",
+      component: Quiz,
+      path: "/quiz",
     },
   ],
 });

@@ -2,7 +2,7 @@
   <nav class="navbar">
     <ul class="nav-links">
       <li><RouterLink to="/">Home</RouterLink></li>
-      <li><RouterLink to="/about">About</RouterLink></li>
+      <li><RouterLink to="/quiz">Quiz</RouterLink></li>
     </ul>
   </nav>
 </template>
@@ -14,6 +14,7 @@ export default {
 </script>
 
 <style scoped>
+
 /* Navbar-styling */
 .navbar {
   background-color: #333;
@@ -21,7 +22,6 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Lista med länkar */
 .nav-links {
   list-style: none;
   display: flex;
@@ -30,7 +30,6 @@ export default {
   margin: 0;
 }
 
-/* Länkar */
 .nav-links li {
   display: inline;
 }
@@ -45,6 +44,6 @@ export default {
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(179, 179, 179, 0.2);
 }
 </style>
