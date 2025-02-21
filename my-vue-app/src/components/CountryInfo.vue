@@ -36,7 +36,7 @@ export default {
   text-align: center;
 }
 img {
-  width: 200px;
+  width: 180px;
   border-radius: 5px;
   margin-top: 10px;
 }

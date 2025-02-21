@@ -16,11 +16,6 @@ export default {
 <style scoped>
 
 /* Navbar-styling */
-.navbar {
-  background-color: #333;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 .nav-links {
   list-style: none;

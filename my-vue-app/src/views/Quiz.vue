@@ -115,11 +115,6 @@ button.answered {
 
 p {
   margin-top: 15px;
-  font-size: 28px;
-}
-
-
-p {
   font-size: 18px;
 }
 </style>
