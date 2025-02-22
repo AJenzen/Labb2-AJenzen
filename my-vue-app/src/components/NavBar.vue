@@ -1,5 +1,6 @@
 <template>
   <nav class="navbar">
+    <div class="logo">Big World</div>
     <ul class="nav-links">
       <li><RouterLink to="/">Home</RouterLink></li>
       <li><RouterLink to="/quiz">Quiz</RouterLink></li>
@@ -16,6 +17,21 @@ export default {
 <style scoped>
 
 /* Navbar-styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #333;
+  box-sizing: border-box;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .nav-links {
   list-style: none;
