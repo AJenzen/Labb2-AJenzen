@@ -10,7 +10,7 @@
 
     <p>or</p>
 
-    <button @click="fetchRandomCountry">Randomizer</button>
+    <button @click="fetchRandomCountry">Randomize</button>
 
     <p v-if="loading">Loading...</p>
     <p v-if="error" class="error">{{ error }}</p>

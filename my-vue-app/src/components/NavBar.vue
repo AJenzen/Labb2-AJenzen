@@ -19,11 +19,16 @@ export default {
 /* Navbar-styling */
 .navbar {
   display: flex;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  left: 0;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 10px 20px;
   background-color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
